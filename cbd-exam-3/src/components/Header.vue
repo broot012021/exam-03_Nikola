@@ -1,13 +1,51 @@
 <template>
 <header class="app-header">
     <nav class="app-header-nav">
-
+        <ul class="app-header-nav__list">
+            <li class="app-header-nav__item">
+                <a href="" class="app-header-nav__link">
+                    Home
+                </a>
+            </li>
+            <li class="app-header-nav__item">
+                <a href="" class="app-header-nav__link">
+                    Products
+                </a>
+            </li>
+            <li class="app-header-nav__item">
+                <a href="" class="app-header-nav__link">
+                    Faqs
+                </a>
+            </li>
+            <li class="app-header-nav__item">
+                <a href="" class="app-header-nav__link">
+                    Contact us
+                </a>
+            </li>
+        </ul>
     </nav>
     <div class="app-header-logo">
-
+        CBD
     </div>
     <div class="app-header-tools">
-
+        <div class="app-header-tools__login
+        app-header-tools--border">
+            <a href="#" class="app-header-tools__link">
+                Login
+            </a>
+        </div>
+        <div class="app-header-tools__search
+        app-header-tools--border">
+            <a href="#" class="app-header-tools__link">
+                Search
+            </a>
+        </div>
+        <div class="app-header-tools__cart
+        app-header-tools--border">
+        <a href="#" class="app-header-tools__link">
+            Cart(0)
+        </a>
+        </div>
     </div>
 </header>
 </template>
@@ -21,4 +59,50 @@ export default {
 
 <style lang="scss">
 
+.app-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: rgba(255,255,255,0.5) 1px solid;
+    height: 80px;
+}
+
+.app-header-nav {
+    display: flex;
+    align-items: center;
+}
+
+.app-header-nav__list {
+    display: flex;
+    gap: 45px;
+    padding-left: 60px;
+    align-items: center;
+}
+
+.app-header-logo {
+    text-align: center;
+    align-self: center;
+}
+.app-header-tools {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &--border {
+        padding: 0 35px;
+        border-left: rgba(255,255,255,0.5) 1px solid;;
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    &__login {
+
+    }
+    &__search {
+
+    }
+    &__cart {
+
+    }
+}
 </style>
