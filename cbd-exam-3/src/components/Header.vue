@@ -78,9 +78,14 @@ export default {
     align-items: center;
 }
 
+.app-header-nav__item {
+    @include font('oswaldregular', 400, 16px, 1px, #ffffff, uppercase);
+}
+
 .app-header-logo {
     text-align: center;
     align-self: center;
+    @include font('oswaldregular', 400, 30px, null, #ffffff, uppercase);
 }
 .app-header-tools {
     display: flex;
@@ -93,16 +98,17 @@ export default {
         display: flex;
         align-items: center;
         height: 100%;
+        @include font('oswaldregular', 400, 16px, 1px, #ffffff, uppercase);
     }
 
     &__login {
-
+        padding: 0 35px;
     }
     &__search {
-
+        padding: 0 35px;
     }
     &__cart {
-
+        padding: 0 35px;
     }
 }
 </style>
