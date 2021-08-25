@@ -64,6 +64,8 @@ export default {
     grid-template-columns: 1fr 1fr 1fr;
     border-bottom: rgba(255,255,255,0.5) 1px solid;
     height: 80px;
+    z-index: 10;
+    position: relative;
 }
 
 .app-header-nav {
@@ -79,13 +81,13 @@ export default {
 }
 
 .app-header-nav__item {
-    @include font('oswaldregular', 400, 16px, 1px, #ffffff, uppercase);
+    @include font('oswaldregular', 400, 16px, 1px, $white, uppercase);
 }
 
 .app-header-logo {
     text-align: center;
     align-self: center;
-    @include font('oswaldregular', 400, 30px, null, #ffffff, uppercase);
+    @include font('oswaldregular', 400, 30px, null, $white, uppercase);
 }
 .app-header-tools {
     display: flex;
@@ -98,7 +100,7 @@ export default {
         display: flex;
         align-items: center;
         height: 100%;
-        @include font('oswaldregular', 400, 16px, 1px, #ffffff, uppercase);
+        @include font('oswaldregular', 400, 16px, 1px, $white, uppercase);
     }
 
     &__login {
