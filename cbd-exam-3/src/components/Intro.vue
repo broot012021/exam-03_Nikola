@@ -8,13 +8,38 @@
         <h3 class="app-intro__subtitle">
             Choose Wisely. Choose CBD.
         </h3>
-        <button class="general-btn">
+        <button class="general-btn app-intro__btn">
             Start Shopping
             <span class="general-btn__line">
             </span>
         </button>
         <a href="#" class="app-intro__link">
             See all products
+            <svg
+            version="1.2"
+            baseProfile="tiny-ps"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 14" width="24" height="14">
+                <title>Arrow</title>
+                <path id="Arrow"
+                class="app-intro__link-arrow"
+                d="M21.86 6.66L21.86
+                6.66L17.32 2.13C17.16
+                1.94 16.87 1.92 16.68
+                2.08C16.49 2.25 16.46
+                2.53 16.63 2.72C16.64
+                2.74 16.66 2.76 16.68
+                2.77L20.45 6.53L2.45
+                6.53C2.2 6.53 2 6.73
+                2 6.98C2 7.23 2.2 7.44
+                2.45 7.44L20.45 7.44L16.68
+                11.19C16.49 11.35 16.46
+                11.64 16.63 11.83C16.79
+                12.02 17.08 12.04 17.27
+                11.88C17.29 11.86 17.3
+                11.84 17.32 11.83L21.86
+                7.3C22.04 7.12 22.04 6.84 21.86 6.66Z" />
+            </svg>
         </a>
     </div>
 </section>
@@ -39,7 +64,6 @@ export default {
         flex-direction: column;
         align-items: flex-end;
         padding: 310px 0 310px 500px;
-
     }
 }
 
@@ -48,11 +72,42 @@ export default {
     line-height: 75px;
     text-align: right;
     text-shadow: 0px 0px 40px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
 }
 
 .app-intro__subtitle {
     @include font('oswaldlight', 300, 24px, 7px, $white-dark, uppercase);
+    margin-bottom: 50px;
 }
+
+.app-intro__btn {
+    margin-bottom: 30px;
+    &:hover {
+        background: $white;
+        color: $black;
+        transition-duration: 0.5s;
+
+        .general-btn__line {
+            background: $black;
+        }
+    }
+}
+
 .app-intro__link {
+    @include font('oswaldlight', 300, 18px, 5px, $white-dark, null);
+
+    &:hover {
+        color: $black;
+        text-shadow: 0px 0px 20px rgba(255, 255, 255);
+        transition-duration: 0.5s;
+
+        .app-intro__link-arrow {
+            fill: $black;
+            text-shadow: 0px 0px 20px rgba(255, 255, 255);
+        }
+    }
+    &-arrow {
+        fill: $white-dark;
+    }
 }
 </style>
