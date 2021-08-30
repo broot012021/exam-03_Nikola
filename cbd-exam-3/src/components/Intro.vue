@@ -53,11 +53,12 @@ export default {
 
 <style lang="scss">
 .app-intro {
-    background: url('~@/assets/img/intro/bg-intro.png') no-repeat;
+    background: url('~@/assets/img/intro/bg-intro.png') no-repeat center;
     height: 100vh;
     position: relative;
     top: -80px;
     box-shadow: 0px 180px 110px 0 rgba(1,24,63,0.3) inset;
+    margin-bottom: -80px;
 
     .container {
         display: flex;
@@ -84,11 +85,11 @@ export default {
     margin-bottom: 30px;
     &:hover {
         background: $white;
-        color: $black;
+        color: $black-light;
         transition-duration: 0.5s;
 
         .general-btn__line {
-            background: $black;
+            background: $black-light;
         }
     }
 }
@@ -97,12 +98,12 @@ export default {
     @include font('oswaldlight', 300, 18px, 5px, $white-dark, null);
 
     &:hover {
-        color: $black;
+        color: $black-light;
         text-shadow: 0px 0px 20px rgba(255, 255, 255);
         transition-duration: 0.5s;
 
         .app-intro__link-arrow {
-            fill: $black;
+            fill: $black-light;
             text-shadow: 0px 0px 20px rgba(255, 255, 255);
         }
     }
