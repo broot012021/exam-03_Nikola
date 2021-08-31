@@ -47,6 +47,10 @@ export default {
         margin: 0 auto;
         position: relative;
         left: 100px;
+
+        @media screen and (max-width: 1320px) {
+            left: 0;
+        }
     }
 }
 
@@ -69,6 +73,7 @@ export default {
             @media screen and (max-width: 768px) {
             grid-column-start: 1;
             grid-column-end: 3;
+            text-align: center;
         }
     }
 
