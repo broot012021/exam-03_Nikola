@@ -71,6 +71,10 @@ export default {
 .app-header-nav {
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 960px) {
+        display: none;
+    }
 }
 
 .app-header-nav__list {
