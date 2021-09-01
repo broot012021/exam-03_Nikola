@@ -60,11 +60,24 @@ export default {
     box-shadow: 0px 180px 110px 0 rgba(1,24,63,0.3) inset;
     margin-bottom: -80px;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     .container {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        padding: 310px 0 310px 500px;
+        justify-content: center;
+        color: $white-dark;
+
+        @media screen and (max-width: 1140px) {
+            padding-right: 40px;
+        }
+
+        @media screen and (max-width: 768px) {
+            padding: 120px 20px 0 20px;
+        }
     }
 }
 
@@ -74,11 +87,23 @@ export default {
     text-align: right;
     text-shadow: 0px 0px 40px rgba(0,0,0,0.5);
     margin-bottom: 30px;
+    width: 60%;
+
+    @media screen and (max-width: 1140px) {
+        width: 80%;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        font-size: 30px;
+        line-height: 45px;
+    }
 }
 
 .app-intro__subtitle {
     @include font('oswaldlight', 300, 24px, 7px, $white-dark, uppercase);
     margin-bottom: 50px;
+    text-align: right;
 }
 
 .app-intro__btn {
