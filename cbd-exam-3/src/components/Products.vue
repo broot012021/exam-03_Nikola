@@ -5,7 +5,8 @@
   </h2>
   <vueper-slides
   class="no-shadow"
-  :arrows="arrows-outside"
+  :arrows="true"
+  arrows-outside
   :bullets="false"
   :visible-slides="3"
   slide-multiple
@@ -33,19 +34,21 @@
         <div class="product-buy__price">
           {{ slide.price }} USD
         </div>
-        <button class="product-buy__btn general-btn">
+        <button class="general-btn product-buy__btn">
           Shop
+          <span class="general-btn__line">
+          </span>
         </button>
       </div>
     </div>
   </template>
+  </vueper-slide>
   <template #arrow-left>
     <div>L</div>
   </template>
   <template #arrow-right>
     <div>R</div>
   </template>
-  </vueper-slide>
 </vueper-slides>
 </section>
 </template>
@@ -92,6 +95,7 @@ export default {
 <style lang="scss">
 .app-products {
   background: $white-bg;
+  margin-top: -120px;
 
   &__title {
     @include font('oswaldregular', 400, 30px, 6px, $black-light, uppercase);
@@ -102,6 +106,7 @@ export default {
 .product {
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 
 .product-info {
@@ -128,6 +133,18 @@ export default {
   &__btn {
     background: $green-bg;
     border: none;
+    cursor: pointer;
+
+    &:hover {
+        background: none;
+        color: $black-light;
+        border: $green-bg 1px solid;
+        transition-duration: 0.5s;
+
+        .general-btn__line {
+            background: $black-light;
+        }
+    }
   }
 }
 
